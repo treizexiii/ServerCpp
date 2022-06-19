@@ -1,7 +1,9 @@
 ﻿#ifndef SIMPLE_SOCKET_H
 #define SIMPLE_SOCKET_H
-
+#pragma comment(lib, "ws2_32.lib")
 #pragma once
+// #pragma comment(lib, "ws2_32.lib")
+
 
 #include <winsock.h>
 

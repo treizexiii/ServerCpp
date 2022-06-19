@@ -5,7 +5,7 @@ ServerCpp::ConnectingSocket::ConnectingSocket(int domain,
             domain, service, protocol, port, link)
 {
     // Establish connection to the socket
-    _connection = ConnectingSocket::ConnectToNetwork(GetSock(), GetAddress()));
+    _connection = ConnectingSocket::ConnectToNetwork(GetSock(), GetAddress());
     TestConnection(_connection);
 }
 

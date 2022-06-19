@@ -156,6 +156,7 @@
   <ItemGroup>
     <ClCompile Include="Networking\ServerCpp-Networking.cpp" />
     <ClCompile Include="Networking\Servers\SimpleServer.cpp" />
+    <ClCompile Include="Networking\Servers\TestServer.cpp" />
     <ClCompile Include="Networking\Sockets\BindingSocket.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -454,6 +455,7 @@
   <ItemGroup>
     <ClInclude Include="Networking\ServerCpp-Networking.h" />
     <ClInclude Include="Networking\Servers\SimpleServer.h" />
+    <ClInclude Include="Networking\Servers\TestServer.h" />
     <ClInclude Include="Networking\Sockets\BindingSocket.h" />
     <ClInclude Include="Networking\Sockets\ConnectingSocket.h" />
     <ClInclude Include="Networking\Sockets\ListeningSocket.h" />

@@ -1,5 +1,8 @@
 ﻿#include "SimpleSocket.h"
 
+#include <exception>
+#include <winsock.h>
+
 ServerCpp::SimpleSocket::SimpleSocket(int domain,
     int service, int protocol, int port, u_long link)
 {
@@ -8,7 +11,14 @@ ServerCpp::SimpleSocket::SimpleSocket(int domain,
     _address.sin_addr.S_un.S_addr = htonl(link);
 
     // Establish socket
-    _sock = socket(domain, service, protocol);
+    try
+    {
+        _sock = socket(domain, service, protocol);
+    }
+    catch (std::exception &e)
+    {
+        throw e;
+    }
     TestConnection(_sock);
 }
 
