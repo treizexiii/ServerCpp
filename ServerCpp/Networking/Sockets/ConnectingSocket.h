@@ -11,7 +11,7 @@ namespace ServerCpp
     public:
         ConnectingSocket(int domain,
                       int service, int protocol, int port, u_long link);
-        int ConnectToNetwork(int sock, sockaddr_in address) override;
+        int ConnectToNetwork(SOCKET sock, sockaddr_in address) override;
     };
 }
 

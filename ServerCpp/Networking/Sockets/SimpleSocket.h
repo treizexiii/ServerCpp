@@ -4,7 +4,6 @@
 #pragma once
 // #pragma comment(lib, "ws2_32.lib")
 
-
 #include <winsock.h>
 
 namespace ServerCpp
@@ -16,16 +15,19 @@ namespace ServerCpp
     private:
         sockaddr_in _address{};
         int _sock;
+        SOCKET _socket;
     public:
         // Constructor
         SimpleSocket(int domain,
                      int service, int protocol, int port, u_long link);
         // Virtual function to connect to a network
-        virtual int ConnectToNetwork(int sock, sockaddr_in address) = 0;
+        virtual int ConnectToNetwork(SOCKET sock, sockaddr_in address) = 0;
         // Function to test the connection
         void TestConnection(int server);
+        void TestConnection(SOCKET server);
         sockaddr_in GetAddress();
-        int GetSock();
+        // int GetSock();
+        SOCKET GetSocket();
     };
 }
 

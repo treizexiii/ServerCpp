@@ -13,6 +13,6 @@ ServerCpp::ListeningSocket::~ListeningSocket()
 
 void ServerCpp::ListeningSocket::StartListening()
 {
-    _listening = listen(GetSock(), _backlog);
+    _listening = listen(GetSocket(), _backlog);
 }
 

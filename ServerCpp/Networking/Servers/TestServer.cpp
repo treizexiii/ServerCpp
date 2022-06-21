@@ -22,13 +22,14 @@ void TestServer::Accepter()
     auto address = GetSocket()->GetAddress();
     int addrlen = sizeof(address);
     typedef int socklen_t;
-    _newSocket = accept(GetSocket()->GetSock(), reinterpret_cast<sockaddr*>(&address),
+    _newSocket = accept(GetSocket()->GetSocket(), reinterpret_cast<sockaddr*>(&address),
                         reinterpret_cast<socklen_t*>(addrlen));
     _read(_newSocket, _buffer, 30000);
 }
 
 void TestServer::Handler()
 {
+    printf("On request");
     cout << _buffer << endl;
 }
 

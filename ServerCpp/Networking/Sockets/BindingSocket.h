@@ -15,7 +15,7 @@ namespace ServerCpp
         BindingSocket(int domain,
                       int service, int protocol, int port, u_long link);
         // Definition of ConnectToNetwork virtual function
-        int ConnectToNetwork(int sock, sockaddr_in address) override;
+        int ConnectToNetwork(SOCKET sock, sockaddr_in address) override;
         int GetBinding();
     };
 }
